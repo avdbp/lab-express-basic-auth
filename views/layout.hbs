@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{appTitle}}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
   <body>
+    <header class="header-bar">
+    <div class="bar-left" >
+          <a  href="/">Inicio</a>
+          <a  href="/user/main">Private</a>
+          <a  href="/user/profile">User Profile</a>
 
+    </div>
+    <div class="bar-right" >
+      <a href="/user/signup">Signup</a>
+      <a href="/user/login">Login</a>
+      <p id="log-status">{{#if username}}
+        {{username}} Logged in
+      {{else}}
+        Guest
+      {{/if}}</p>
+      <a href="/user/logout">Logout</a>
+    </div>
+    </header>
     {{{body}}}
 
     <script src="/js/script.js"></script>

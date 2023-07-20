@@ -1,0 +1,44 @@
+<div class="div-form">
+
+<form action="/user/signup" method="POST" class="form">
+  {{#if errorMessage}}
+    <div class="error-message">
+      {{errorMessage}}
+    </div>
+  {{/if}}
+  <div class="div-input">
+    <input
+      type="text"
+      id="floatingInput"
+      placeholder="name@example.com"
+      name="username"
+    />
+    <label for="floatingInput">Username</label>
+
+  <div>
+    <input
+      type="password"
+      class="form-control"
+      id="floatingPassword"
+      placeholder="Password"
+      name="password"
+    />
+    <label for="floatingPassword">Password</label>
+  </div>
+  <div>
+    <input
+      type="password"
+      class="form-control"
+      id="floatingPassword"
+      placeholder="Password"
+      name="passwordRepeat"
+    />
+    <label for="floatingPassword">Repeat password</label>
+  </div>
+  <button type="submit">Signup</button>
+  <a href="/user/login">I already have an account</a>
+  </div>
+</form>
+
+
+</div>
